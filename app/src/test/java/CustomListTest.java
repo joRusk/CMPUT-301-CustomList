@@ -42,4 +42,12 @@ public class CustomListTest {
         assertThrows(IllegalArgumentException.class,
                 ()->{list.deleteCity(c);});
     }
+
+    @Test
+    public void countCitiesTest(){
+        City c = new City("Edmonton","AB");
+        assertEquals(0,list.countCities());
+        list.addCity(c);
+        assertEquals(1,list.countCities());
+    }
 }

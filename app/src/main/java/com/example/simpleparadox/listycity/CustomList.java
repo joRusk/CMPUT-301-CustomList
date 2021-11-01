@@ -84,4 +84,12 @@ public class CustomList extends ArrayAdapter<City> {
             throw new IllegalArgumentException("city could not be found in the list");
         }
     }
+
+    /**
+     * this function counts the number of city objects in the list
+     * @return
+     */
+    public int countCities(){
+        return -1;
+    }
 }
