@@ -75,8 +75,13 @@ public class CustomList extends ArrayAdapter<City> {
     /**
      * this function will remove the given city object from the list
      * @param city
+     * @throws IllegalArgumentException
      */
-    public void deleteCity(City city){
-        return;
+    public void deleteCity(City city) throws IllegalArgumentException {
+        if (cities.contains(city)){
+            cities.remove(city);
+        } else {
+            throw new IllegalArgumentException("city could not be found in the list");
+        }
     }
 }

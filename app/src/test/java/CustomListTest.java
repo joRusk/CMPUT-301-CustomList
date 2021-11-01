@@ -1,7 +1,10 @@
 import com.example.simpleparadox.listycity.City;
 import com.example.simpleparadox.listycity.CustomList;
 import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+//import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
@@ -9,7 +12,7 @@ public class CustomListTest {
 
     static CustomList list;
 
-    @Before
+    @BeforeEach
     public void setup(){
         list = new CustomList(null, new ArrayList<City>());
     }
@@ -36,5 +39,7 @@ public class CustomListTest {
         list.addCity(c);
         list.deleteCity(c);
         assertFalse(list.hasCity(c));
+        assertThrows(IllegalArgumentException.class,
+                ()->{list.deleteCity(c);});
     }
 }
