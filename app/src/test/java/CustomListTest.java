@@ -1,8 +1,6 @@
 import com.example.simpleparadox.listycity.City;
 import com.example.simpleparadox.listycity.CustomList;
-import org.junit.*;
 import org.junit.jupiter.api.Test;
-//import static org.junit.Assert.*;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
